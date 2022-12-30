@@ -1,0 +1,21 @@
+main ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+main ul li a{
+    text-decoration: none;
+    background-color: #5EA8FF;
+    padding: 10px;
+    margin: 20px;
+    color: #000;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+main ul li a:hover{
+    background-color: #FFBD3A;
+}

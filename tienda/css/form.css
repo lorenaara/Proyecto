@@ -1,0 +1,59 @@
+main {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top:50px ;
+    background-color: rgba(227, 226, 226, 0.619);
+    box-shadow: 3px 3px 3px 3px #4e4d4d;
+    width: 50%;
+    padding: 100px;
+}
+main h2{
+    margin-bottom: 30px;
+   color: #5EA8FF;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+main form  input{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+main form select{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #757575;
+}
+main form input#sesion{
+    background-color: #FFBD3A;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+main form input#sesion:hover{
+    background-color: #5EA8FF;
+}
+main div{
+    font-family: 'Merriweather', serif;
+}
+main div a:hover{
+color: #FFBD3A;
+}

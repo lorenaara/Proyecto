@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #5EA8FF;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+header img#logo{
+    width: 40%;
+    flex: 10%;
+    margin-left: 20px;
+}
+header h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    -webkit-text-stroke: 2px #fff;
+    color: #FFBD3A; 
+    flex: 40%;
+}
+header div#iconos{
+    flex: 10%;
+}
+header img.icono{
+    width: 40px;
+    margin: 20px;
+}
+nav{
+    background-color: #FFBD3A;
+    position: sticky;
+    top:0px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+nav ul li{
+    margin: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #5EA8FF;
+    display: inline-block;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-size: 30px;
+}
+nav ul li a:hover{
+    -webkit-text-stroke: 1px rgb(10, 10, 10);
+}
+main video{
+    margin: auto;
+    display: flex;
+}
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+main section article{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 3px #4e4d4d;
+    
+}
+main section article img{
+    flex: 80%;
+    margin: auto;
+    margin-top: 5px;
+}
+main section article h3{
+    color: #FFBD3A;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 900;
+}
+main section article p{
+    color: #4e4d4d;
+    margin: 15px;
+}
+footer{
+    background-color: #FFBD3A;
+    margin-top: 80px;
+}
+footer section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img#logoFooter{
+   margin: -60px;
+   margin-left:650px ;
+   margin-bottom: 50px;
+}
+footer section article{
+    flex: 25%;
+    margin-bottom: 20px;
+}
+
+footer article img{
+    width: 40px;
+    margin-left: 20px;
+}
+footer article.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer article.text a{
+    text-decoration: none;
+    color: #000;
+}
+footer article.text img{
+    width: 30px;
+    margin-right: 10px;
+}
+span{
+    color: red;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
