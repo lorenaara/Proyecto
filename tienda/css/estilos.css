@@ -91,7 +91,7 @@ main section article p{
     margin: 15px;
 }
 footer{
-    background-color: #FFBD3A;
+    /* background-color: #FFBD3A; */
     margin-top: 80px;
 }
 footer section{
@@ -109,25 +109,30 @@ footer section article{
     margin-bottom: 20px;
 }
 
-footer article img{
+footer article.text img{
     width: 40px;
     margin-left: 20px;
 }
-footer article.text{
+footer article .text{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 footer article.text a{
     text-decoration: none;
     color: #000;
 }
-footer article.text img{
-    width: 30px;
-    margin-right: 10px;
-}
 span{
     color: red;
     font-weight: 900;
     margin-bottom: 10px;
+}
+footer article.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer article.frame img{
+    width: 20%;
 }
