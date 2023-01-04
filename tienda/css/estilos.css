@@ -91,7 +91,7 @@ main section article p{
     margin: 15px;
 }
 footer{
-    /* background-color: #FFBD3A; */
+    background-color: #FFBD3A;
     margin-top: 80px;
 }
 footer section{
@@ -109,11 +109,11 @@ footer section article{
     margin-bottom: 20px;
 }
 
-footer article.text img{
+footer article img{
     width: 40px;
     margin-left: 20px;
 }
-footer article .text{
+footer article.text{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,10 +123,9 @@ footer article.text a{
     text-decoration: none;
     color: #000;
 }
-span{
-    color: red;
-    font-weight: 900;
-    margin-bottom: 10px;
+footer article.text img{
+    width: 30px;
+    margin-right: 10px;
 }
 footer article.frame{
     display: flex;
@@ -135,4 +134,7 @@ footer article.frame{
 }
 footer article.frame img{
     width: 20%;
+}
+table, td{
+    border:1px solid black; border-collapse:collapse;
 }
