@@ -36,7 +36,7 @@ function modificarUser($id, $pass, $email, $fecha){
         echo 'error';
         print_r($ex);
     }finally{
-        unset($conexion); //Se cierra la conexion
+        unset($conexion); 
     }
 }
 
@@ -121,5 +121,23 @@ function albaran(){
     }   
 }
 
+function insertarUser($nombre, $email, $fecha, $pass){
+    try{
+        $conexion = new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
+        $consulta = 'insert into usuario values (?,?,?,?)';
+        $preparada= $conexion->prepare($consulta);
+        $preparada->bindParam(1,$nombre);
+        $preparada->bindParam(2, $pass);
+        $preparada->bindParam(3, $email);
+        $preparada->bindParam(4, $fecha);
+        $preparada->execute();
+
+    }catch(Exception $ex) {
+        echo 'error';
+        print_r($ex);
+    }finally{
+        unset($conexion); 
+    }   
+}
 
 ?>

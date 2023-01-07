@@ -1,4 +1,5 @@
 <?
+require './bbdd.php';
 function vacio($nombre){
     if(empty($_REQUEST[$nombre])){
         return true;
@@ -23,5 +24,12 @@ function comprobarPass($pass, $pass1){
         return true;
     }
     return false;
+}
+function validarFormUser(){
+    if(enviado()){
+        if(!vacio('nombre') && !vacio('email') && !vacio('fecha') && !vacio('pass') && !pass('pass')){
+            insertarUser($_REQUEST['usuario'], $_REQUEST['email'], $_REQUEST['fecha'], $_REQUEST['pass']);
+        }
+    }
 }
 ?>
