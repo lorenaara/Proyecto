@@ -1,5 +1,14 @@
 <?
     require('../php/validaciones.php');
+
+    $correcto= false;
+
+    if(enviado()){
+        if(validarFormUser()){
+            $correcto=true;
+        }
+    }
+    if(!enviado() || $correcto==false){
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,7 +36,7 @@
         </div>
     </header>
     <main>
-        <form action="registrarse.php">
+        <form action="registrarse.php"  method="post">
             <h2>Registro</h2>
             <input type="text" name="usuario" id="usuario" placeholder="Usuario" value="<?
                 if(enviado() && !vacio('usuario')){
@@ -104,12 +113,6 @@
                 <?
                 }
             ?>
-            <!-- <select name="perfil" id="perfil">
-                <option value="perfil">Selecciona Perfil</option>
-                <option value="usuario">Usuario</option>
-                <option value="administrador">Administrador</option>
-                <option value="moderador">Moderador</option>
-            </select> -->
             <input type="submit" value="Crear Cuenta" id="sesion" name="enviar">
         </form>
     </main>
@@ -132,3 +135,6 @@
     </footer>
 </body>
 </html>
+<?php
+ }
+?>

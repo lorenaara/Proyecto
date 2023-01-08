@@ -1,3 +1,7 @@
+<?php
+    // require '../php/bbdd.php';
+    require '../seguro/conexion.php';   
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,7 +42,26 @@
             <li><a href="insertar.html">Insertar</a></li>
             <li><a href="modificar.html">Modificar</a></li>
         </ul>
-        
+       <?php
+        // productos();
+        try{
+            $conexion = new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
+            $consulta= 'select * from producto';
+            $resultado= $conexion->query($consulta);
+            echo '<div id="producto">';
+            while($row= $resultado->fetch(PDO::FETCH_ASSOC)){
+                foreach($row as $key =>$value){
+                    echo $row['img'] .
+                    '<h3>'.$row['nombre'].'</h3><p>'. $row['descripcion'].'</p><p>'.$row['precio'].'</p>';
+                }
+            }
+        }catch(Exception $ex) {
+            echo 'error';
+            print_r($ex);
+        }finally{
+            unset($conexion); 
+        }   
+       ?>
     </main>
     <footer>
         <img src="../img/logo-footer.svg" alt="toy Planet" id="logoFooter">

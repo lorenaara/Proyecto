@@ -1,5 +1,5 @@
 <?
-require './bbdd.php';
+ require ('./php/bbdd.php');
 function vacio($nombre){
     if(empty($_REQUEST[$nombre])){
         return true;
@@ -29,6 +29,8 @@ function validarFormUser(){
     if(enviado()){
         if(!vacio('nombre') && !vacio('email') && !vacio('fecha') && !vacio('pass') && !pass('pass')){
             insertarUser($_REQUEST['usuario'], $_REQUEST['email'], $_REQUEST['fecha'], $_REQUEST['pass']);
+            header('Location:index.html');
+            exit;
         }
     }
 }

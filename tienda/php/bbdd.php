@@ -1,6 +1,5 @@
 <?php
 require '../seguro/conexion.php';
-require '../css/estilos.css';
 function insertarProducto($codProd, $nombre, $descripcion, $precio, $stock, $img){
    try {
     $conexion = new PDO('mysql:host='.HOST .';dbname='. BBDD, USER, PASS);
@@ -140,4 +139,23 @@ function insertarUser($nombre, $email, $fecha, $pass){
     }   
 }
 
+function productos(){
+    try{
+        $conexion = new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
+        $consulta= 'select * from producto';
+        $resultado= $conexion->query($consulta);
+        echo '<div id="producto">';
+        while($row= $resultado->fetch(PDO::FETCH_ASSOC)){
+            foreach($row as $key =>$value){
+                echo $row['img'] .
+                '<h3>'.$row['nombre'].'</h3><p>'. $row['descripcion'].'</p><p>'.$row['precio'].'</p>';
+            }
+        }
+    }catch(Exception $ex) {
+        echo 'error';
+        print_r($ex);
+    }finally{
+        unset($conexion); 
+    }   
+}
 ?>
