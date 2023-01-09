@@ -138,3 +138,33 @@ footer article.frame img{
 table, td{
     border:1px solid black; border-collapse:collapse;
 }
+
+@media screen and (max-width: 1000px){
+    header{
+        flex-direction: column;
+    }
+   main video{
+    width: 100%;
+   }
+   main section{
+    flex-wrap: wrap;
+   }
+   footer section{
+    flex-direction: column;
+   }
+   footer img#logoFooter{
+    margin-left:250px ;
+   }
+  
+}
+@media screen and (max-width: 600px){
+    header{
+        flex-direction: column;
+    }
+    main section{
+        flex-direction: column;
+       }
+    footer img#logoFooter{
+         margin-left:200px ;
+    }
+}

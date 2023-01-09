@@ -1,5 +1,5 @@
 <?php
-    // require '../php/bbdd.php';
+     require '../php/bbdd.php';
     require '../seguro/conexion.php';   
 ?>
 <!DOCTYPE html>
@@ -43,24 +43,8 @@
             <li><a href="modificar.html">Modificar</a></li>
         </ul>
        <?php
-        // productos();
-        try{
-            $conexion = new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
-            $consulta= 'select * from producto';
-            $resultado= $conexion->query($consulta);
-            echo '<div id="producto">';
-            while($row= $resultado->fetch(PDO::FETCH_ASSOC)){
-                foreach($row as $key =>$value){
-                    echo $row['img'] .
-                    '<h3>'.$row['nombre'].'</h3><p>'. $row['descripcion'].'</p><p>'.$row['precio'].'</p>';
-                }
-            }
-        }catch(Exception $ex) {
-            echo 'error';
-            print_r($ex);
-        }finally{
-            unset($conexion); 
-        }   
+        productos();
+         
        ?>
     </main>
     <footer>

@@ -147,7 +147,7 @@ function productos(){
         echo '<div id="producto">';
         while($row= $resultado->fetch(PDO::FETCH_ASSOC)){
             foreach($row as $key =>$value){
-                echo $row['img'] .
+                echo '<img src="'.$row['img'] .'>'.
                 '<h3>'.$row['nombre'].'</h3><p>'. $row['descripcion'].'</p><p>'.$row['precio'].'</p>';
             }
         }
