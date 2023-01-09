@@ -1,6 +1,6 @@
 <?
-    require('../php/validaciones.php');
-
+    require '../php/validaciones.php';
+    require '../php/bbdd.php';
     $correcto= false;
 
     if(enviado()){

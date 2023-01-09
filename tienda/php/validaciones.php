@@ -1,5 +1,5 @@
 <?
- require ('./php/bbdd.php');
+ require ('../php/bbdd.php');
 function vacio($nombre){
     if(empty($_REQUEST[$nombre])){
         return true;
@@ -14,7 +14,7 @@ function enviado(){
 }
 function pass($pass){
     $patron='/[A-Z][a-z][0-9]{8,}/';
-    if($preg_match($patron, $_REQUEST[$pass])==1){
+    if(preg_match($patron, $_REQUEST[$pass])==1){
         return true;
     }
     return false;

@@ -24,8 +24,8 @@ function modificarUser($id, $pass, $email, $fecha){
     try {
         $conexion = new PDO('mysql:host='.HOST .';dbname='. BBDD, USER, PASS);
         $consulta='update usuario set clave=?, email=?, fecha=? where id=?';
-        $preparada->$conexion->prepare($consulta);
-        $preparada->binParam(1, $pass);
+        $preparada=$conexion->prepare($consulta);
+        $preparada->bindParam(1, $pass);
         $preparada->bindParam(2, $email);
         $preparada->bindParam(3, $fecha);
         $preparada->bindParam(4,$id);
