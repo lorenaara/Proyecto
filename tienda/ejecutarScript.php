@@ -1,12 +1,16 @@
 <?php
-    require './seguro/conexion.php';
-    try {
-        $conexion = mysqli_connect($_SERVER['SERVER_ADDR'], USER, PASS);
-        $script = file_get_contents('./tienda.sql');
-        mysqli_multi_query($conexion,$script);
-        mysqli_close($conexion);
-    } catch (Exception $ex) {
-        echo mysqli_connect_errno();
-        echo mysqli_connect_error();
-    }
-?>
+
+include "./seguro/conexion.php";
+try {
+    $conn = new PDO("mysql:host=" . HOST, USER, PASS);
+
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $commands = file_get_contents("./tienda.sql");
+    $conn->exec($commands);
+    
+} catch (PDOException $e) {
+    print_r($e);
+} finally {
+    unset($conn); 
+}

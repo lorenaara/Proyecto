@@ -1,5 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="es">
+<?
+    session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,9 +32,6 @@
         <form action="usuario.html" method="get"> 
             
             <h2>Iniciar Sesión</h2>
-        
-          
-                
                 <input type="text" name="usuario" id="usuario" placeholder="Usuario">
             
                 <input type="password" name="pass" id="pass" placeholder="Contraseña">

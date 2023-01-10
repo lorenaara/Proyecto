@@ -1,11 +1,11 @@
 <?
     require '../php/validaciones.php';
-    require '../php/bbdd.php';
     $correcto= false;
 
     if(enviado()){
         if(validarFormUser()){
             $correcto=true;
+            insertarUser($_REQUEST['usuario'],$_REQUEST['email'],$_REQUEST['fecha'], $_REQUEST['pass']);
         }
     }
     if(!enviado() || $correcto==false){
