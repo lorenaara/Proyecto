@@ -9,8 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-</head>
-<body>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="shortcut icon" href="../img/logo-footer.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/productos.css">
+</head>
+<body>
+   
 
 </head>
 <body>
@@ -32,17 +33,14 @@
     </header>
     <nav>
         <ul>
-            <li><a href="productos.html">Productos</a></li>
+            <li><a href="productos.php">Productos</a></li>
             <li><a href="albaran.html">Albaran</a></li>
             <li><a href="carrito.html">Carrito</a></li>
             <li><a href="ventas.html">Ventas</a></li>
         </ul>
     </nav>
     <main>
-        <ul>
-            <li><a href="insertar.html">Insertar</a></li>
-            <li><a href="modificar.html">Modificar</a></li>
-        </ul>
+       
        <?php
         productos();
          

@@ -140,13 +140,16 @@ function insertarUser($nombre, $email, $fecha, $pass){
 }
 
 function productos(){
+    echo '<section>';
     try{
         $conexion = new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
         $consulta= 'select * from producto';
         $resultado= $conexion->query($consulta);
         echo '<div id="producto">';
-        while($row= $resultado->fetch(PDO::FETCH_ASSOC)){      
-                echo "<img src='../".$row['img'] ."'><h3>".$row['nombre']."</h3><p>". $row['descripcion']."</p><p>".$row['precio']."</p>";      
+        while($row= $resultado->fetch(PDO::FETCH_ASSOC)){  
+                echo '<article>';
+                echo "<img src='../".$row['img'] ."'><h3>".$row['nombre']."</h3><p>". $row['descripcion']."</p><p>".$row['precio']."</p>"; 
+                echo '</article>' ;     
         }
     }catch(Exception $ex) {
         echo 'error';
@@ -154,5 +157,6 @@ function productos(){
     }finally{
         unset($conexion); 
     }   
+    echo '</section>';
 }
 ?>

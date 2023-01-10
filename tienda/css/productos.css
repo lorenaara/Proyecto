@@ -19,3 +19,6 @@ main ul li a{
 main ul li a:hover{
     background-color: #FFBD3A;
 }
+section article{
+    width: 25%;
+}
