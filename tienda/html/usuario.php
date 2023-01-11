@@ -20,16 +20,15 @@
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../img/logo.png" alt="toy Planet" id="logo"></a>
+        <a href="../index.php"><img src="../img/logo.png" alt="toy Planet" id="logo"></a>
         <h1>TOY PLANET</h1>
         <div id="iconos">
-            <a href="usuario.html"><img src="../img/icons8-usuario-de-género-neutro-32.png" alt="usuario" class="icono"></a>
-            <a href="carrito.html"><img src="../img/icons8-carrito-de-compras-32.png" alt="carrito" class="icono"></a>
+            <a href="usuario.php"><img src="../img/icons8-usuario-de-género-neutro-32.png" alt="usuario" class="icono"></a>
         </div>
     </header>
     <main>
        
-        <form action="usuario.html" method="get"> 
+        <form action="usuario.php" method="get"> 
             
             <h2>Iniciar Sesión</h2>
                 <input type="text" name="usuario" id="usuario" placeholder="Usuario">

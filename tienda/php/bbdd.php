@@ -159,4 +159,30 @@ function productos(){
     }   
     echo '</section>';
 }
+
+function sesiones($user, $pass){
+    try{
+        $conexion= new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
+        $consulta= 'select * from usuario where user=? and clave=?';
+        $preparada=$conexion->prepare($consulta);
+        $array=array($user, $pass);
+        $preparada->execute($array);
+        
+        if($preparada->rowCount()==1){
+            session_start();
+            $_SESSION['valido']=true;
+            $row=$preparada->fetch();
+            $_SESSION['user']=$user;
+            $_SESSION['perfil']= $row['perfil'];
+            unset($conexion);
+        }else{
+            unset($con);
+            return false;
+        }
+
+    }catch(Exception $ex){
+        print_r($ex);
+        unset($con);
+    }
+}
 ?>

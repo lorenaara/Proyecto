@@ -21,15 +21,14 @@
         <h1>TOY PLANET</h1>
         <div id="iconos">
             <a href="./html/usuario.php"><img src="./img/icons8-usuario-de-género-neutro-32.png" alt="usuario" class="icono"></a>
-            <a href="./html/carrito.html"><img src="./img/icons8-carrito-de-compras-32.png" alt="carrito" class="icono"></a>
         </div>
     </header>
     <nav>
         <ul>
             <li><a href="./html/productos.php">Productos</a></li>
-            <li><a href="./html/albaran.html">Albaran</a></li>
+            <!-- <li><a href="./html/albaran.html">Albaran</a></li>
             <li><a href="./html/carrito.html">Carrito</a></li>
-            <li><a href="./html/ventas.html">Ventas</a></li>
+            <li><a href="./html/ventas.html">Ventas</a></li> -->
         </ul>
     </nav>
     <main>
