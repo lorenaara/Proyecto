@@ -1,5 +1,6 @@
 <?
-    require './ejecutarScript.php';
+ //conectar 
+    //require './ejecutarScript.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">

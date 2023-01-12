@@ -3,6 +3,7 @@
 <html lang="es">
 <?
     session_start();
+    //si valida header home
 ?>
 <head>
     <meta charset="UTF-8">
