@@ -1,14 +1,14 @@
 <?php
-    session_start();
-    require './bbdd.php';
+    //session_start();
+    include './bbdd.php';
     $user=$_REQUEST['usuario'];
     $pass=$_REQUEST['pass'];
 
     if(empty($user)){
-        header('Location:../php/usuario.php');
+        header('Location:../html/usuario.php');
         exit;
     }elseif(empty($pass)){
-        header('Location:../php/usuario.php');
+        header('Location:../html/usuario.php');
         exit;      
     }else{
         if(sesiones($user, $pass)){
@@ -34,7 +34,7 @@
                 exit;
             }
         }else{
-            header('Location:../php/usuario.php');
+            header('Location:../html/usuario.php');
             exit;
         }
     }

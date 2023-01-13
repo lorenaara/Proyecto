@@ -1,6 +1,10 @@
 <?
- //conectar 
-    //require './ejecutarScript.php';
+include ('./seguro/conexion.php');
+try{
+    $conexion= new PDO('mysql:host=' . HOST . ';dbname=' . BBDD, USER, PASS);
+} catch (PDOException $e) {
+    require './ejecutarScript.php';
+} 
 ?>
 <!DOCTYPE html>
 <html lang="es">

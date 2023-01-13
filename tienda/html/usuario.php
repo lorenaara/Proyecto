@@ -3,6 +3,12 @@
 <html lang="es">
 <?
     session_start();
+    require ('../php/validaciones.php');
+    require ('../php/validaSesiones.php');
+    if(estaValidado()){
+        header('Location:../index.php');
+        exit;
+    }
     //si valida header home
 ?>
 <head>
@@ -60,3 +66,10 @@
     </footer>
 </body>
 </html>
+
+<?php
+   /* if(esModerador()){
+        header('Location:../php/validaSesiones.php');
+        exit;
+    }*/
+?>

@@ -12,13 +12,21 @@ function enviado(){
     }
     return false;
 }
-function pass($pass){
+/*function pass($pass){
     $patron='/[A-Z][a-z][0-9]{8,}/';
+    if(preg_match($patron, $_REQUEST[$pass])==1){
+        return true;
+    }[a-zA-Z0-9_]
+    return false;
+}*/
+function pass($pass){
+    $patron='[a-zA-Z0-9]{8,}';
     if(preg_match($patron, $_REQUEST[$pass])==1){
         return true;
     }
     return false;
 }
+
 function comprobarPass($pass, $pass1){
     if($_REQUEST[$pass] == $_REQUEST[$pass1]){
         return true;
