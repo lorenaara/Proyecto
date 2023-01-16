@@ -42,6 +42,14 @@ function validarFormUser(){
         }
     }
 }
+function validaProducto(){
+    if(enviado()){
+        if(!vacio('codProd') && !vacio('nombre') && !vacio('descripcion') && !vacio('precio')){
+            insertarProducto($_REQUEST['codProd'], $_REQUEST['nombre'], $_REQUEST['descripcion'], $_REQUEST['precio'], $_REQUEST['img']);
+            
+        }
+    }
+}
 
 function estaValidado(){
     if(isset($_SESSION['validado'])){

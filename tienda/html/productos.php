@@ -28,21 +28,58 @@
         <h1>TOY PLANET</h1>
         <div id="iconos">
             <a href="usuario.php"><img src="../img/icons8-usuario-de-género-neutro-32.png" alt="usuario" class="icono"></a>
+            <?php
+            session_start();
+                echo '<a href="./modUser.php">' .$_SESSION['user'].'</a>';
+            ?>
         </div>
     </header>
-    <nav>
+    <?php
+        if($_SESSION['perfil']=='ADM'){
+     ?>
+     
+     <nav>
+                
         <ul>
-            <li><a href="productos.php">Productos</a></li>
-            <!-- <li><a href="albaran.html">Albaran</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="ventas.html">Ventas</a></li> -->
+            <li><a href="./productos.php">Producto</a></li>
+            <li><a href="./albaran.php">Albaran</a></li>
+            <li><a href="./ventas.php">Ventas</a></li>
         </ul>
     </nav>
+     <?php
+        }elseif($_SESSION['perfil']=='MOD'){
+    ?>
+     <nav>
+                
+                <ul>
+                    <li><a href="./productos.php">Producto</a></li>
+                    <li><a href="./albaran.php">Albaran</a></li>
+                    <li><a href="./ventas.php">Ventas</a></li>
+                </ul>
+            </nav>
+    <? 
+        }else{
+    ?>
+            <nav>
+                
+            <ul>
+                <li><a href="./productos.php">Producto</a></li>
+        </nav>
+        <?
+        }
+    ?>
     <main>
        
        <?php
-        productos();
-         
+         if($_SESSION['perfil']=='ADM'){
+             echo '<a href="./insertarProducto.php">Insertar</a>';
+             productosAdmin();
+            }elseif($_SESSION['perfil']=='MOD'){
+
+                productos();
+            }elseif($_SESSION['perfil']=='USER'){
+                productosUser();
+            }
        ?>
     </main>
     <footer>

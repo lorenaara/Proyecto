@@ -5,7 +5,7 @@
     if(enviado()){
         if(validarFormUser()){
             $correcto=true;
-            insertarUser($_REQUEST['usuario'],$_REQUEST['email'],$_REQUEST['fecha'], $_REQUEST['pass']);
+            // insertarUser($_REQUEST['usuario'],$_REQUEST['email'],$_REQUEST['fecha'], $_REQUEST['pass']);
         }
     }
     if(!enviado() || $correcto==false){

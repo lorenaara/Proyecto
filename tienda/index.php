@@ -18,7 +18,7 @@ try{
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
@@ -26,14 +26,12 @@ try{
         <h1>TOY PLANET</h1>
         <div id="iconos">
             <a href="./html/usuario.php"><img src="./img/icons8-usuario-de-género-neutro-32.png" alt="usuario" class="icono"></a>
+             
         </div>
     </header>
     <nav>
         <ul>
             <li><a href="./html/productos.php">Productos</a></li>
-            <!-- <li><a href="./html/albaran.html">Albaran</a></li>
-            <li><a href="./html/carrito.html">Carrito</a></li>
-            <li><a href="./html/ventas.html">Ventas</a></li> -->
         </ul>
     </nav>
     <main>

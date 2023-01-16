@@ -1,12 +1,9 @@
 <?php
-   // require '../php/bbdd.php';
-    require '../php/validaciones.php';
-    $correcto= false;
-    if(!enviado()){
-        if(validaProducto()){
-            $correcto=true;
-        }
+    require '../php/bbdd.php';
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,62 +32,40 @@
             ?>
         </div>
     </header>
+    <?php
+        if($_SESSION['perfil']=='ADM'){
+     ?>
+     
+     <nav>
+                
+        <ul>
+        <li><a href="./productos.php">Productos</a></li>
+            <li><a href="./albaran.php">Albaran</a></li>
+            <li><a href="./ventas.php">Ventas</a></li>
+        </ul>
+    </nav>
+     <?php
+        }elseif($_SESSION['perfil']=='MOD'){
+?>
+ <nav>
+                
+                <ul>
+                <li><a href="./productos.php">Productos</a></li>
+                    <li><a href="./albaran.php">Albaran</a></li>
+                    <li><a href="./ventas.php">Ventas</a></li>
+                </ul>
+            </nav>
+        <?php
+        }
+    ?>
     <main>
-        <form action="./productos.php" method="post" enctype="multipart/form-data">
-        <h2>Producto</h2>
-        <input type="text" name="codProd" id="codProd" placeholder="Codigo Producto" value="<?
-                if(enviado() && !vacio('codProd')){
-                    echo $_REQUEST['codProd'];
-                }
-            ?>">
-        <?
-            if(enviado() && vacio('codProd')){
-            ?>
-            <span>El codigo del Producto no puede estar vacio</span>
-            <?
-            }
-            ?>
-           <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<?
-                if(enviado() && !vacio('nombre')){
-                    echo $_REQUEST['nombre'];
-                }
-            ?>">
-            <?php
-        if(enviado() && vacio('nombre')){
-            ?>
-            <span>El Nombre no puede estar vacio</span>
-            <?
-            }
-            ?>
-         <input type="text" name="descripcion" id="descripcion" placeholder="descripcion" value="<?
-                if(enviado() && !vacio('descripcion')){
-                    echo $_REQUEST['descripcion'];
-                }
-            ?>">
-         <?
-            if(enviado() && vacio('descripcion')){
-            ?>
-            <span>La descripcion no puede estar vacio</span>
-            <?
-            }
-            ?>
-            <input type="number" name="precio" id="precio" placeholder="precio" value="<?
-                if(enviado() && !vacio('precio')){
-                    echo $_REQUEST['precio'];
-                }
-            ?>">
-         <?
-            if(enviado() && vacio('precio')){
-            ?>
-            <span>El precio no puede estar vacio</span>
-            <?
-            }
-            ?>
-            <input type="file"
-       id="img" name="img"
-       accept="image/png, image/jpeg">
-       <input type="submit" value="Insertar Producto" id="sesion" name="enviar">
-        </form>
+    <?php
+     if($_SESSION['perfil']=='ADM'){
+       ventasAdmin();
+     }elseif($_SESSION['perfil']=='MOD'){
+        ventasMod();
+     }
+    ?>
     </main>
     <footer>
         <img src="../img/logo-footer.svg" alt="toy Planet" id="logoFooter">
@@ -109,11 +84,5 @@
         </article>
     </section>
     </footer>
-    
-
-
 </body>
 </html>
-<?php
-    }
-?>

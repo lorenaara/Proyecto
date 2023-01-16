@@ -1,16 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<?
-    session_start();
-    require ('../php/validaciones.php');
-    require ('../php/validaSesiones.php');
-    if(estaValidado()){
-        header('Location:../index.php');
-        exit;
-    }
-    //si valida header home
-?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +17,7 @@
 </head>
 <body>
     <header>
-        <a href="../index.php"><img src="../img/logo.png" alt="toy Planet" id="logo"></a>
+        <a href="../php/validaSesiones.php"><img src="../img/logo.png" alt="toy Planet" id="logo"></a>
         <h1>TOY PLANET</h1>
         <div id="iconos">
             <a href="usuario.php"><img src="../img/icons8-usuario-de-género-neutro-32.png" alt="usuario" class="icono"></a>
@@ -35,9 +25,19 @@
     </header>
     <main>
        
-        <form action="usuario.php" method="get"> 
+        <form action="../php/validaSesiones.php" method="get"> 
             
             <h2>Iniciar Sesión</h2>
+                <input type="hidden" name="codigo" value="<?php
+                    if(isset($_REQUEST['codigo'])){
+                        echo $_REQUEST['codigo'];
+                    }
+                ?>">
+                <?php
+                    if(isset($_SESSION['error'])){
+                        echo $_SESSION['error'];
+                    }
+                ?>
                 <input type="text" name="usuario" id="usuario" placeholder="Usuario">
             
                 <input type="password" name="pass" id="pass" placeholder="Contraseña">
@@ -66,10 +66,3 @@
     </footer>
 </body>
 </html>
-
-<?php
-   /* if(esModerador()){
-        header('Location:../php/validaSesiones.php');
-        exit;
-    }*/
-?>
