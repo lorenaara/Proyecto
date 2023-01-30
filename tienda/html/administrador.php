@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admistrador</title>
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/productos.css">
     <link rel="shortcut icon" href="../img/logo-footer.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +42,11 @@
             <li><a href="./ventas.php">Ventas</a></li>
         </ul>
     </nav>
-    <main>
+    
+    
     <?php
     productosAdmin();
     ?>
-    </main>
     <footer>
         <img src="../img/logo-footer.svg" alt="toy Planet" id="logoFooter">
         <section>
