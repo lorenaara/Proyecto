@@ -49,7 +49,7 @@
     ?>
     <main>
     <?php
-        borrarVenta();
+        borrarAlbaran();
     ?>
     </main>
     <footer>
