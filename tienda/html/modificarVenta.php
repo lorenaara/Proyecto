@@ -31,9 +31,10 @@
         </div>
     </header>
     <main>
+        <article id="tabla">
         <?php
-        modVentas();
-        ?>
+        modificarProducto();
+        ?></article>
     </main>
     <footer>
         <img src="../img/logo-footer.svg" alt="toy Planet" id="logoFooter">
