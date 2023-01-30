@@ -52,7 +52,7 @@
      <nav>
                 
                 <ul>
-                    <li><a href="./productos.php">Producto</a></li>
+                    <li ><a href="./productos.php">Producto</a></li>
                     <li><a href="./albaran.php">Albaran</a></li>
                     <li><a href="./ventas.php">Ventas</a></li>
                 </ul>
@@ -72,7 +72,7 @@
        
        <?php
          if($_SESSION['perfil']=='ADM'){
-             echo '<a href="./insertarProducto.php">Insertar</a>';
+             echo '<p class="parrafo"><a id="insert"  href="./insertarProducto.php">Insertar</a></p>';
              productosAdmin();
             }elseif($_SESSION['perfil']=='MOD'){
 
