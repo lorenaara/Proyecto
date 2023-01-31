@@ -32,7 +32,7 @@
     </header>
     <main>
         <?php
-        modificarAlbaran();
+        modificarProducto();
         ?>
     </main>
     <footer>

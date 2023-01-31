@@ -59,13 +59,14 @@
             </nav>
     <? 
         }else{
+           
     ?>
             <nav>
                 
             <ul>
                 <li><a href="./productos.php">Producto</a></li>
         </nav>
-        <?
+        <? productos();
         }
     ?>
     <main>

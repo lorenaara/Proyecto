@@ -34,8 +34,8 @@ function modificarUser(){
         $user= $_REQUEST['user'];
         $preparada->bindParam(1, $clave);
         $preparada->bindParam(2, $email);
-        $preparada->bindPam(3, $fecha);
-        $preparada->bindPam(4,$user);
+        $preparada->bindParam(3, $fecha);
+        $preparada->bindParam(4,$user);
         $preparada->execute();
         header('Location:../index.php');
         exit;
@@ -73,7 +73,7 @@ function modificarUser(){
             }
             //echo '</tr>';
         }
-        echo '<td><input type="submit" name="guardar" value="Guardar"></td>';
+        echo '<td><input class="modi" type="submit" name="guardar" value="Guardar"></td>';
         echo '</form></table>';
     }
 
@@ -96,7 +96,7 @@ function ventasAdmin(){
             foreach($row as $key => $value){
                 echo '<td>'. $value.'</td>';
             }
-            echo '<td><a href="./modificarVenta.php?name='.$row['id'].'">Modificar</a></td><td><a href="./borrarVenta.php?name='.$row['id'].'">Borrar</a></td></tr>';
+            echo '<td><a class="modi" href="./modificarVenta.php?name='.$row['id'].'">Modificar</a></td><td><a class="modi" href="./borrarVenta.php?name='.$row['id'].'">Borrar</a></td></tr>';
         }
         echo '</table>';
     }catch(Exception $ex) {
@@ -178,7 +178,7 @@ function modVentas(){
                     echo '<td><input type="number" name="precio" step="0.01"  value='. $row['precio'].'></td>';
                 }
             }
-            echo '<td style="border: #000 1px solid; padding:10px;"><input type="submit" name="guardar" value="Guardar"></td>';
+            echo '<td style="border: #000 1px solid; padding:10px;"><input class="modi" type="submit" name="guardar" value="Guardar"></td>';
             echo '</tr>';
     }
     echo '</form></table>';
@@ -217,7 +217,7 @@ function albaranAdmin(){
             foreach($row as $key => $value){
                 echo '<td>'. $value.'</td>';
             }
-            echo '<td><a href="./modificarAlbaran.php?name='.$row['id'].'">Modificar</a></td><td><a href="./borrarAlbaran.php?name='.$row['id'].'">Borrar</a></td></tr>';
+            echo '<td><a class="modi" href="./modificarAlbaran.php?name='.$row['id'].'">Modificar</a></td><td><a href="./borrarAlbaran.php?name='.$row['id'].'">Borrar</a></td></tr>';
         }
         echo '</table>';
     }catch(Exception $ex) {
@@ -297,7 +297,7 @@ function modificarAlbaran(){
                 echo '<td><input type="text" name="name"  value='. $row['user'].'></td>';
             }
         }
-            echo '<td style="border: #000 1px solid; padding:10px;"><input type="submit" name="guardar" value="Guardar"></td>';
+            echo '<td style="border: #000 1px solid; padding:10px;"><input class="modi" type="submit" name="guardar" value="Guardar"></td>';
                 echo '</tr>';
         }
         echo '</form></table>';
@@ -375,7 +375,7 @@ function productosAdmin(){
         while($row= $resultado->fetch(PDO::FETCH_ASSOC)){  
                 echo '<article>';
                 echo "<img src='../".$row['img'] ."'><h3>".$row['nombre']."</h3><p>". $row['descripcion']."</p><p>".$row['precio']."</p>"; 
-                echo '<a href="./modProducto.php?name='.$row['codProd'].'">Modificar</a>';
+                echo '<a class="modi" href="./modProducto.php?name='.$row['codProd'].'">Modificar</a>';
                 echo '</article>' ;     
         }
     }catch(Exception $ex) {
@@ -454,7 +454,7 @@ function comprar(){
                 echo '<td><input type="number" name="cantidad"></td>';
                 
             }
-                       echo '<td style="border: #000 1px solid; padding:10px;"><input type="submit" name="guardar" value="comprar"></td>';
+                       echo '<td style="border: #000 1px solid; padding:10px;"><input class="modi" type="submit" name="guardar" value="comprar"></td>';
             echo '</tr>';
              echo '</form></table>';
     }catch(Exception $ex) {
@@ -528,7 +528,7 @@ function modificarProducto(){
                     echo '<td><img src="../'.$row['img'] .'"></td>';
                 }
             }
-            echo '<td style="border: #000 1px solid; padding:10px;"><input type="submit" name="guardar" value="Guardar"></td>';
+            echo '<td style="border: #000 1px solid; padding:10px;"><input type="submit" name="guardar" value="Guardar" class="modi"></td>';
             echo '</tr>';
         }
                    
